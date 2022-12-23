@@ -1,5 +1,5 @@
-[CPP/cmake] gRPC sample
-
+## [CPP/cmake] gRPC sample
+gRPC + Protocol Buffer sample & gRPC + FlatBuffers sample
 
 
 ### How to Use
