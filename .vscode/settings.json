@@ -1,0 +1,4 @@
+{
+    "cmake.setBuildTypeOnMultiConfig": true,
+    "cmake.buildDirectory": "${workspaceFolder}/.build",
+}
