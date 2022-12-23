@@ -1,0 +1,54 @@
+[
+  {
+      "name": "Visual Studio Professional 2019 test - amd64",
+      "visualStudio": "b2071f50",
+      "visualStudioArchitecture": "x64",
+      "preferredGenerator": {
+        "name": "Visual Studio 16 2019",
+        "platform": "x64",
+        "toolset": "host=x64"
+      },
+      "configuration": "Debug"
+
+    },
+  {
+    "name": "Visual Studio Professional 2019 Release - amd64",
+    "visualStudio": "b2071f50",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "x64",
+      "toolset": "host=x64"
+    }
+  },
+  {
+    "name": "Visual Studio Professional 2019 Release - amd64_x86",
+    "visualStudio": "b2071f50",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "win32",
+      "toolset": "host=x64"
+    }
+  },
+  {
+    "name": "Visual Studio Professional 2019 Release - x86",
+    "visualStudio": "b2071f50",
+    "visualStudioArchitecture": "x86",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "win32",
+      "toolset": "host=x86"
+    }
+  },
+  {
+    "name": "Visual Studio Professional 2019 Release - x86_amd64",
+    "visualStudio": "b2071f50",
+    "visualStudioArchitecture": "x86",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "x64",
+      "toolset": "host=x86"
+    }
+  }
+]
