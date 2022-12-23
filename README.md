@@ -2,19 +2,28 @@
 
 
 
-###How to Use
+### How to Use
 
-need download vcpkg first 
+1. need download vcpkg first 
+
+2. open Cpp_gRPC_Sample/CMakeLists.txt and set CMAKE_TOOLCHAIN_FILE, flatbuffers_TOOL_DIR, gRPC_TOOL_DIR 
+
+3. download pkgs
+```Shell
+./vcpkg install grpc:x64-windows
+./vcpkg install protobuf protobuf:x64-windows
+./vcpkg install protobuf[zlib] protobuf[zlib]:x64-windows
+./vcpkg install flatbuffers
+
+./vcpkg integrate install
+```
 
 
 
-download pkgs
-[CMD] ./vcpkg install grpc:x64-windows
-[CMD] ./vcpkg install protobuf protobuf:x64-windows
-[CMD] ./vcpkg install protobuf[zlib] protobuf[zlib]:x64-windows
-[CMD] ./vcpkg install flatbuffers
 
-[CMD] ./vcpkg integrate install
+
+
+
 
 ref doc. https://sanoj.in/2020/05/07/working-with-grpc-in-windows.html
 
