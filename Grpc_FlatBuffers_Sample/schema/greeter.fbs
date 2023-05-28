@@ -7,7 +7,7 @@ table HelloRequest {
 }
  
 table ManyHellosRequest {
-  name:string;
+  name:string; 
   num_greetings:int;
 }
  

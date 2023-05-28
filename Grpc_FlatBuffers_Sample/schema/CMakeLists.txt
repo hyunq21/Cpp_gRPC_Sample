@@ -1,8 +1,12 @@
 ﻿file(GLOB FlatbufFiles CONFIGURE_DEPENDS "*.fbs")
 
+
+message(${flatbuffers_TOOL_DIR}/flatc.exec --cpp --grpc -o ${CMAKE_CURRENT_SOURCE_DIR}/.src ${FlatbufFiles})
+
+
 execute_process(
-    COMMAND ${flatbuffers_TOOL_DIR}/flatc.exe --cpp --grpc -o ${CMAKE_CURRENT_SOURCE_DIR}/.src ${FlatbufFiles}
-)
+    COMMAND ${flatbuffers_TOOL_DIR}/flatc.exec --cpp --grpc -o ${CMAKE_CURRENT_SOURCE_DIR}/.src ${FlatbufFiles}
+) # window -> .exe mac none
 
 file(GLOB Flat_Gen_SRC CONFIGURE_DEPENDS ".src/*.h" ".src/*.cpp" ".src/*.cc")
 

@@ -3,11 +3,14 @@
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/.src)
 set(PROTO_SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/.src")
 
+message(${protobuf_TOOL_DIR}/protoc -I=${CMAKE_CURRENT_SOURCE_DIR} --grpc_out=${PROTO_SRC_DIR} --plugin=protoc-gen-grpc=${gRPC_TOOL_DIR}/grpc_cpp_plugin ${ProtoFiles})
+
+
 foreach(file ${ProtoFiles})
     execute_process(
-        COMMAND ${Protobuf_PROTOC_EXECUTABLE} -I=${CMAKE_CURRENT_SOURCE_DIR} --grpc_out=${PROTO_SRC_DIR} --plugin=protoc-gen-grpc=${gRPC_TOOL_DIR}/grpc_cpp_plugin.exe ${file} 
-        COMMAND ${Protobuf_PROTOC_EXECUTABLE} -I=${CMAKE_CURRENT_SOURCE_DIR} --cpp_out=${PROTO_SRC_DIR} ${file} 
-    )
+        COMMAND ${protobuf_TOOL_DIR}/protoc -I=${CMAKE_CURRENT_SOURCE_DIR} --grpc_out=${PROTO_SRC_DIR} --plugin=protoc-gen-grpc=${gRPC_TOOL_DIR}/grpc_cpp_plugin ${file} 
+        COMMAND ${protobuf_TOOL_DIR}/protoc -I=${CMAKE_CURRENT_SOURCE_DIR} --cpp_out=${PROTO_SRC_DIR} ${file} 
+    )# .exe
 endforeach()
 
 file(GLOB Proto_Gen_SRC CONFIGURE_DEPENDS ".src/*.h" ".src/*.cpp" ".src/*.cc")

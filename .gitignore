@@ -19,3 +19,4 @@
 *.fb.cc
 *.pb.h
 *.pb.cc
+*.DS_Store

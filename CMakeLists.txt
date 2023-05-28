@@ -4,10 +4,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # need download vcpkg first 
-set(CMAKE_TOOLCHAIN_FILE D:/Utill/vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "Vcpkg toolchain file")
+set(CMAKE_TOOLCHAIN_FILE "~/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Vcpkg toolchain file")
 
-set(flatbuffers_TOOL_DIR "D:/Utill/vcpkg/installed/x64-windows/tools/flatbuffers")
-set(gRPC_TOOL_DIR "D:/Utill/vcpkg/installed/x64-windows/tools/grpc")
+set(flatbuffers_TOOL_DIR "~/vcpkg/installed/arm64-osx/tools/flatbuffers")
+set(protobuf_TOOL_DIR "~/vcpkg/installed/arm64-osx/tools/protobuf") #Protobuf_PROTOC_EXECUTABLE
+set(gRPC_TOOL_DIR "~/vcpkg/installed/arm64-osx/tools/grpc") #x64-windows
 
 # download pkgs
 # [CMD] ./vcpkg install grpc:x64-windows
